@@ -1,0 +1,15 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+// Root
+$body-font-family: 'Inter', sans-serif;
+$font-size-root: 16px;
+
+// v-btn
+$btn-text-transform: capitalize;
+
+// v-text-filled
+$text-field-filled-full-width-outlined-slot-min-height: 44px;
+.v-input__icon.v-input__icon--append {
+  height: 12px;
+}
