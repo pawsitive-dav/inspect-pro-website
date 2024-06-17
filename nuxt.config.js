@@ -22,16 +22,41 @@ export default {
     middleware: ['auth'],
   },
 
-  plugins: [
-    { src: '~/plugins/socket.io.js', ssr: false },
-    '~/plugins/crypto.js',
-  ],
+  plugins: ['~/plugins/crypto.js'],
 
   components: true,
 
   buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/vuetify'],
 
-  modules: ['@nuxtjs/axios', '@nuxtjs/dotenv'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/dotenv', '@nuxtjs/i18n'],
+
+  i18n: {
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
+    locales: [
+      {
+        code: 'en',
+        name: 'English',
+        iso: 'en-US',
+        file: 'en/index.js',
+      },
+      {
+        code: 'th',
+        name: 'ภาษาไทย',
+        iso: 'th-TH',
+        file: 'th/index.js',
+      },
+    ],
+    lazy: true,
+    langDir: 'lang/',
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+    },
+  },
 
   axios: {
     baseURL: process.env.FEATURE_SERVICES_URL,
