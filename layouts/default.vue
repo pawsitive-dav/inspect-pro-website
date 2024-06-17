@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app>
     <!-- <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -26,7 +26,7 @@
       </v-list>
     </v-navigation-drawer> -->
 
-    <v-app-bar :clipped-left="clipped" fixed app>
+    <!-- <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
@@ -43,12 +43,12 @@
         <v-icon>mdi-menu</v-icon>
       </v-btn>
       <auth-sign-out />
-    </v-app-bar>
+    </v-app-bar> -->
+
+    <LayoutNavbar />
 
     <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
+      <Nuxt />
     </v-main>
 
     <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
