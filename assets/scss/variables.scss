@@ -13,3 +13,12 @@ $text-field-filled-full-width-outlined-slot-min-height: 44px;
 .v-input__icon.v-input__icon--append {
   height: 12px;
 }
+
+$grid-breakpoints: (
+  'xs': 0,
+  'sm': 800px,
+  'md': 1000px,
+  'lg': 1200px,
+  'xl': 1440px,
+  'xxl': 1920px
+);
