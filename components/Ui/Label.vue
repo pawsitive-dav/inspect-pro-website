@@ -1,5 +1,5 @@
 <template>
-  <div class="label grey--text text--darken-3">
+  <div class="ui-label grey--text text--darken-3">
     <slot />
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style scoped>
-.label {
+.ui-label {
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.5px;

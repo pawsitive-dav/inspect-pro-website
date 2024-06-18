@@ -1,5 +1,5 @@
 <template>
-  <section class="green" style="padding-top: 100px">
+  <section class="grey" style="padding-top: 100px">
     <v-container>
       <div>
         <h1>Home Page</h1>
@@ -20,12 +20,12 @@
           {{ $t('welcome') }}
         </div>
       </div>
-      <v-card height="1200">
+      <UiCard height="1200px">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
         sequi nulla nobis officia. Facere quas id quae fugiat voluptate aliquam
         quasi officiis qui reprehenderit corrupti! At placeat reiciendis nulla
         nisi!
-      </v-card>
+      </UiCard>
     </v-container>
   </section>
 </template>

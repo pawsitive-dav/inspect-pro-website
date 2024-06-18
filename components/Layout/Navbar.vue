@@ -1,11 +1,11 @@
 <template>
   <div :class="['layout-navbar', { scrolled: isScrolled }]">
-    <v-container>
+    <v-container class="pa-0">
       <div class="navbar">
         <div>LOGO</div>
         <v-spacer />
         <div>
-          <v-btn>Sign In</v-btn>
+          <v-btn elevation="0">Sign In</v-btn>
         </div>
       </div>
     </v-container>
@@ -46,10 +46,12 @@ export default {
 }
 .layout-navbar.scrolled {
   background-color: #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
-.layout-navbar .navbar {
+.navbar {
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 75px;
 }
 </style>
