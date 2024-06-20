@@ -12,4 +12,14 @@ module.exports = {
   plugins: [],
   // add your custom rules here
   rules: {},
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue'],
+      },
+    },
+  },
+  globals: {
+    OutlineIcons: 'readonly',
+  },
 }

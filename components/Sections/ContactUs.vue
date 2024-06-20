@@ -1,8 +1,8 @@
 <template>
   <section id="section-contact-us">
     <v-container class="text-center">
-      <div class="body-2 primary--text">CONTACT US</div>
-      <div class="display-1">
+      <div class="body-2 primary--text mb-2">CONTACT US</div>
+      <div class="display-1 mb-2">
         Have any questions ? We would love to hear from you.
       </div>
       <div class="body-1 grey--text">
@@ -37,9 +37,83 @@
             ></iframe>
           </div>
         </v-col>
+
         <v-col cols="12" md="6">
-          <v-card color="grey lighten-5" elevation="0">
-            <v-card-text> Contact Form </v-card-text>
+          <v-card color="grey lighten-5" elevation="0" class="pa-6">
+            <v-form
+              ref="formContact"
+              v-model="contactForm.valid"
+              lazy-validation
+            >
+              <v-row>
+                <v-col cols="12" md="6" class="py-0">
+                  <UiLabel for="firstName">First Name:</UiLabel>
+                  <v-text-field
+                    v-model="contactForm.firstName"
+                    :rules="[(v) => !!v || 'First Name is required']"
+                    name="firstName"
+                    placeholder="Enter first name."
+                    outlined
+                    required
+                  />
+                </v-col>
+                <v-col cols="12" md="6" class="py-0">
+                  <UiLabel for="lastName">Last Name:</UiLabel>
+                  <v-text-field
+                    v-model="contactForm.lastName"
+                    :rules="[(v) => !!v || 'Last Name is required']"
+                    name="lastName"
+                    placeholder="Enter last name."
+                    outlined
+                    required
+                  />
+                </v-col>
+                <v-col cols="12" md="6" class="py-0">
+                  <UiLabel for="phoneNumber">Phone Number:</UiLabel>
+                  <v-text-field
+                    v-model="contactForm.phoneNumber"
+                    :rules="[(v) => !!v || 'Phone Number is required']"
+                    name="phoneNumber"
+                    placeholder="Enter phone number."
+                    outlined
+                    required
+                  />
+                </v-col>
+                <v-col cols="12" md="6" class="py-0">
+                  <UiLabel for="email">Email:</UiLabel>
+                  <v-text-field
+                    v-model="contactForm.email"
+                    :rules="[(v) => !!v || 'Email is required']"
+                    name="email"
+                    placeholder="Enter email."
+                    outlined
+                    required
+                  />
+                </v-col>
+                <v-col cols="12" class="py-0">
+                  <UiLabel for="message">
+                    Message: <span class="grey--text">(optional)</span>
+                  </UiLabel>
+                  <v-textarea
+                    v-model="contactForm.message"
+                    name="message"
+                    rows="2"
+                    outlined
+                  ></v-textarea>
+                </v-col>
+              </v-row>
+
+              <v-btn
+                :disabled="!contactForm.valid"
+                large
+                color="primary"
+                elevation="0"
+                class="mt-4"
+                @click="validate"
+              >
+                Send Message
+              </v-btn>
+            </v-form>
           </v-card>
         </v-col>
       </v-row>
@@ -50,6 +124,27 @@
 <script>
 export default {
   name: 'SectionsContactUs',
+
+  data() {
+    return {
+      contactForm: {
+        valid: false,
+        firstName: '',
+        lastName: '',
+        phoneNumber: '',
+        email: '',
+        message: '',
+      },
+    }
+  },
+
+  methods: {
+    validate() {
+      if (this.$refs.formContact.validate()) {
+        console.log('Call API')
+      }
+    },
+  },
 }
 </script>
 

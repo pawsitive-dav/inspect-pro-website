@@ -47,7 +47,6 @@
                 Bangkok 10120
               </li>
               <li>info@inspect-pro.com</li>
-              <li>About Us</li>
               <li>(+66) 62-325-8317</li>
               <li>(+66) 93-027-1716</li>
             </ul>
@@ -87,7 +86,7 @@ ul {
 }
 
 ul li {
-  padding: 4px 0;
+  padding: 6px 0;
 }
 
 ul li a {
