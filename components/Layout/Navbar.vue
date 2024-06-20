@@ -1,11 +1,24 @@
 <template>
   <div :class="['layout-navbar', { scrolled: isScrolled }]">
-    <v-container class="pa-0">
+    <v-container class="py-0">
       <div class="navbar">
-        <div>LOGO</div>
+        <div>
+          <v-img
+            v-if="!isScrolled"
+            :src="require('~/assets/logo/inspectpro-white.svg')"
+            width="150"
+          ></v-img>
+          <v-img
+            v-else
+            :src="require('~/assets/logo/inspectpro.svg')"
+            width="150"
+          ></v-img>
+        </div>
         <v-spacer />
         <div>
-          <v-btn elevation="0">Sign In</v-btn>
+          <v-btn color="#2C6DC9" elevation="0" class="white--text">
+            Sign In
+          </v-btn>
         </div>
       </div>
     </v-container>

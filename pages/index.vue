@@ -1,33 +1,40 @@
 <template>
-  <section class="grey" style="padding-top: 100px">
-    <v-container>
-      <div>
-        <h1>Home Page</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nihil
-          quos deserunt corrupti ea unde tempora ratione soluta nulla, deleniti
-          praesentium consequatur inventore perferendis? A debitis eveniet illum
-          dicta dolores!
-        </p>
-        <nuxt-link
-          v-for="locale in availableLocales"
-          :key="locale.code"
-          :to="switchLocalePath(locale.code)"
-        >
-          {{ locale.name }}
-        </nuxt-link>
+  <div>
+    <section
+      class="blue darken-1"
+      style="padding-top: 150px; padding-bottom: 150px"
+    >
+      <v-container class="white--text">
         <div>
-          {{ $t('welcome') }}
+          <div class="title pb-4">BRILLIANCE IN EXECUTION</div>
+          <div class="display-2 mb-4">Your sure stop place for best</div>
+          <div class="display-2">
+            theme ends here with
+            <span class="blue--text text--darken-4">InspectPro</span>
+          </div>
+          <div class="py-6">
+            InspectPro - Now you can use this admin template to design stunning
+            dashboards that will wow your target viewers or users to no end.
+          </div>
+          <div class="mt-6">
+            <v-btn large color="#2C6DC9" elevation="0" class="white--text">
+              Sign Up for FREE Try!
+            </v-btn>
+          </div>
         </div>
-      </div>
-      <UiCard height="1200px">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-        sequi nulla nobis officia. Facere quas id quae fugiat voluptate aliquam
-        quasi officiis qui reprehenderit corrupti! At placeat reiciendis nulla
-        nisi!
-      </UiCard>
-    </v-container>
-  </section>
+      </v-container>
+    </section>
+    <section>
+      <v-container>
+        <UiCard height="1200px">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+          sequi nulla nobis officia. Facere quas id quae fugiat voluptate
+          aliquam quasi officiis qui reprehenderit corrupti! At placeat
+          reiciendis nulla nisi!
+        </UiCard>
+      </v-container>
+    </section>
+  </div>
 </template>
 
 <script>
