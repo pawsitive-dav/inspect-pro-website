@@ -1,5 +1,5 @@
 <template>
-  <section id="section-0">
+  <section id="hero-section">
     <v-container class="white--text">
       <v-row>
         <v-col cols="12" md="7">

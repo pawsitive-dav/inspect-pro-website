@@ -15,9 +15,24 @@
           ></v-img>
         </div>
         <v-spacer />
+
+        <div>
+          <v-btn
+            v-for="(item, index) in menuList"
+            :key="'menu' + index"
+            :to="item.to"
+            text
+          >
+            {{ item.name }}
+          </v-btn>
+        </div>
+
+        <v-spacer />
+
         <div>
           <v-btn color="#2C6DC9" elevation="0" class="white--text">
             Sign In
+            <UiIcon name="arrow-left-end-on-rectangle" small />
           </v-btn>
         </div>
       </div>
@@ -31,6 +46,14 @@ export default {
   data() {
     return {
       isScrolled: false,
+      menuList: [
+        { name: 'Home', to: '#hero-section' },
+        { name: 'Feature', to: '#feature-section' },
+        { name: 'About Us', to: '#feature-section' },
+        { name: 'Pricing', to: '#pricing-section' },
+        { name: `Faq's`, to: '#faq-section' },
+        { name: 'Contact Us', to: '#contact-section' },
+      ],
     }
   },
   mounted() {

@@ -30,12 +30,12 @@
           <v-col cols="12" md="3">
             <div class="mb-4 title white--text">INFO</div>
             <ul>
-              <li><a href="#section-0">FREE Try!</a></li>
+              <li><a href="#hero-section">FREE Try!</a></li>
               <li><a href="#">Features</a></li>
               <li><a href="#">About Us</a></li>
               <li><a href="#">Pricing</a></li>
               <li><a href="#">Faq's</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#contact-section">Contact Us</a></li>
             </ul>
           </v-col>
 
